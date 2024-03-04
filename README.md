@@ -3,5 +3,5 @@
 ### -Basic Calculations
 ### -Trig Calculations
 ### -Log Calculations
-### -Deravitive abd Integral Calculator
+### -Deravitive and Integral Calculator
 ### -Complex Number Calculations
