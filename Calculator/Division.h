@@ -1,15 +1,15 @@
 #ifndef DIVISION_H
 #define DIVISION_H
+#include "Numbers.h"
 
 #include <iostream>
 using namespace std;
 
-class Division {
-private:
+class Division : public Numbers {
 
 public:
     Division();
-    virtual void calc(double* myArray, int size);
+    void calc(double* myArray, int size)override;
     ~Division();
 };
 

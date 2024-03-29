@@ -2,21 +2,25 @@
 #define NUMBERS_H
 
 #include <iostream>
-#include "Division.h"
 #include <string>
 #include <iomanip>
 
 using namespace std;
 
-class Numbers : public Division {
+class Numbers {
 protected:
     double* myArray;
     int Size;
     char operation;
+    string function;
 
 public:
     Numbers();
-    // void operator<<(Numbers num);
+    virtual void calc(double* myArray, int size);
+    int getSize() { return Size; }
+    char getOpe() { return operation; }
+    double* getArray() { return myArray; }
+    string getFunction() { return function; }
     ~Numbers();  // Empty destructor
 };
 

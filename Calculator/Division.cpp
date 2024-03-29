@@ -16,3 +16,4 @@ void Division::calc(double* myArray, int size)
 
 Division::~Division() {
 }
+

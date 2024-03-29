@@ -2,14 +2,10 @@
 //
 
 #include <iostream>
-#include <string>
-#include <iomanip>
-#include <fstream>
-#include "Numbers.h"
+#include "Menu.h"
 using namespace std;
 
 int main()
 {
-    Numbers array;
-    // array.operator<<(array);
+	Menu menu;
 }

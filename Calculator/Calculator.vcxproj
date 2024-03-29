@@ -128,12 +128,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="Cotangent.cpp" />
     <ClCompile Include="Division.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Multiplication.cpp" />
+    <ClCompile Include="NaturalLog.cpp" />
     <ClCompile Include="Numbers.cpp" />
+    <ClCompile Include="QuadraticEquation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cotangent.h" />
     <ClInclude Include="Division.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Multiplication.h" />
+    <ClInclude Include="NaturalLog.h" />
     <ClInclude Include="Numbers.h" />
+    <ClInclude Include="QuadraticEquation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Numbers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
