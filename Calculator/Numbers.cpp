@@ -10,7 +10,7 @@ Numbers::Numbers()
 	fstream myFileReader;
 	myFileReader.open("Numbers.txt");
 
-	myArray =nullptr;
+	myArray = nullptr;
 	Size = 0;
 	operation = '_';
 	function = " ";
@@ -19,7 +19,7 @@ Numbers::Numbers()
 	myFileReader >> ope;
 
 	if (myFileReader) {
-		if (ope.compare("ln") != 0 || ope.compare("cot") != 0 || ope.compare("quadratic") == 0)
+		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0)
 		{
 			while (!myFileReader.eof())
 			{
@@ -28,7 +28,7 @@ Numbers::Numbers()
 				size++;
 			}
 		}
-		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("quadratic") != 0)
+		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0)
 		{
 			string number = " ";
 			myFileReader >> number;
@@ -42,22 +42,43 @@ Numbers::Numbers()
 	myFileReader.open("Numbers.txt");
 
 	myFileReader >> ope;
-	
+
 	if (ope.compare("ln") == 0) {
-		operation = 0;
+		operation = 6;
 	}
 	else if (ope.compare("*") == 0) {
 		operation = '*';
 	}
 	else if (ope.compare("cot") == 0) {
-		operation = 8;
+		operation = 12;
 	}
 	else if (ope.compare("quadratic") == 0) {
-		operation = 9;
+		operation = 13;
+	}
+	else if (ope.compare("/") == 0) {
+		operation = '/';
+	}
+	else if (ope.compare("graph") == 0) {
+		operation = 18;
+	}
+	else if (ope.compare("csc") == 0) {
+		operation = 10;
+	}
+	else if (ope.compare("sec") == 0) {
+		operation = 11;
+	}
+	else if (ope.compare("sin") == 0) {
+		operation = 7;
+	}
+	else if (ope.compare("log") == 0) {
+		operation = 5;
+	}
+	else if (ope.compare("+") == 0) {
+		operation = '+';
 	}
 
 	if (myFileReader) {
-		if (ope.compare("ln") != 0 || ope.compare("cot") != 0 || ope.compare("quadratic") == 0)
+		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0)
 		{
 			for (int i = 0; i < size; i++)
 			{
@@ -68,7 +89,7 @@ Numbers::Numbers()
 				array[i] = stod(number);
 			}
 		}
-		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("quadratic") != 0)
+		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0)
 		{
 			function = ope;
 			for (int i = 0; i < size; i++)
@@ -84,58 +105,6 @@ Numbers::Numbers()
 
 	myArray = array;
 	Size = size;
-
-	/*
-	fstream myFileReader;
-	myFileReader.open("Numbers.txt");
-
-	//myFileReader >> operation >> function;
-
-	int size = 0;
-	string number = " ";
-	if (myFileReader) {
-		while (!myFileReader.eof())
-		{
-			myFileReader >> number;
-			size++;
-		}
-	}
-
-	int* array = new int[number.length()];
-	string a = "(";
-	if (myFileReader)
-	{
-		for (int i = 0; i < number.length(); i++)
-		{
-			if (number.compare(i, number.length(), a) == true) {
-				array[i] = i;
-			}
-		}
-		for (int i = 0; i < number.length(); i++)
-		{
-			cout << array[i];
-		}
-		
-		//myArray = array;
-		//Size = size;
-
-		for (int i = 1; i < Size; i++)
-		{
-			cout << " " << operation << " " << myArray[i];
-		}
-		cout << endl;
-
-
-		if (operation == '/' && !(function == "ln")) {
-			Division::calc(myArray, Size);
-		}
-		else if (operation == '/' && function == "ln")
-		{
-			ln(myArray, Size);
-		}
-		cout << endl;
-		
-	}*/
 
 }
 

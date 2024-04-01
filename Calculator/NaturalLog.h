@@ -5,7 +5,7 @@ class NaturalLog
 {
 public:
 	NaturalLog();
-	void ln(double* myArray, int size);
+	void calc(double* myArray, int size);
 	~NaturalLog();
 
 private:

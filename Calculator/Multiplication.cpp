@@ -9,7 +9,7 @@ Multiplication::Multiplication()
 
 void Multiplication:: calc(double* myArray, int size)
 {
-	double product = myArray[0];
+	double product = 1;
 	for (int i = 0; i < size; i++)
 	{
 		product *= myArray[i];

@@ -3,27 +3,41 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
-#include "NaturalLog.h"
+#include "Addition.h"
 #include "Division.h"
 #include "Multiplication.h"
 #include "Numbers.h"
+#include "NaturalLog.h"
+#include "Logarithmic.h"
+#include "Sine.h"
+#include "Cosecant.h"
+#include "Secant.h"
 #include "Cotangent.h"
 #include "QuadraticEquation.h"
+#include "Graph.h"
+#include "ImagineryNumbers.h"
 using namespace std;
 
 Menu::Menu()
 {
     std::cout << "Welcome to the supreme calculator" << endl;
     Numbers numbers;
+    Addition addition;
     Division division;
     Multiplication multiplication;
+    Logarithmic log;
     NaturalLog ln;
+    Sine sin;
+    Cosecant csc;
+    Secant sec;
     Cotangent cot;
     QuadraticEquation quadratic;
+    Graph graph;
+    ImagineryNumbers imagineryNumbers;
     int counter = 0;
     int size = 0;
 
-    if (numbers.getOpe() != 0)
+    if (numbers.getOpe() == '*' || (numbers.getOpe() == '/'))
     {
         std::cout << numbers.getArray()[0];
         for (int i = 1; i < numbers.getSize(); i++)
@@ -32,7 +46,7 @@ Menu::Menu()
         }
         std::cout << endl;
     }
-    else if (numbers.getOpe() < 10) {
+    else if (numbers.getOpe() == 6 || numbers.getOpe() == 12) {
         string function = numbers.getFunction();
         std::cout << function << " " << numbers.getArray()[0];
         std::cout << endl;
@@ -40,7 +54,7 @@ Menu::Menu()
     
     switch (numbers.getOpe()) {
     case '+':
-        std::cout << "Addition";
+        addition.calc(numbers.getArray(), numbers.getSize());
         break;
     case '-':
         std::cout << "Subtraction";
@@ -51,14 +65,14 @@ Menu::Menu()
     case '/':
         division.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 'log':
-        std::cout << "Logarithm";
+    case 5:
+        log.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 0:
-        ln.ln(numbers.getArray(), numbers.getSize());
+    case 6:
+        ln.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 'sin':
-        std::cout << "Sin";
+    case 7:
+        sin.calc(numbers.getArray(), numbers.getSize());
         break;
     case 'cos':
         std::cout << "Cos";
@@ -66,18 +80,24 @@ Menu::Menu()
     case 'tan':
         std::cout << "Tan";
         break;
-    case 'csc':
-        std::cout << "Csc";
+    case 10:
+        csc.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 'sec':
-        std::cout << "Sec";
+    case 11:
+        sec.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 8:
+    case 12:
         cot.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 9:
+    case 13:
         quadratic.calc(numbers.getArray(), numbers.getSize());
         break;
+    case 14:
+        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
+    case 15:
+        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
+    case 16:
+        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
     case 'G1':
         std::cout << "Tomas' game";
         break;
@@ -89,6 +109,9 @@ Menu::Menu()
         break;
     case 'G4':
         std::cout << "Game 4";
+        break;
+    case 18:
+        graph.calc(numbers.getArray(), numbers.getSize());
         break;
     default:
         std::cout << "Please try again";

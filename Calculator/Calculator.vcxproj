@@ -127,23 +127,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Addition.cpp" />
     <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="Cosecant.cpp" />
     <ClCompile Include="Cotangent.cpp" />
     <ClCompile Include="Division.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="ImagineryNumbers.cpp" />
+    <ClCompile Include="Logarithmic.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Multiplication.cpp" />
     <ClCompile Include="NaturalLog.cpp" />
     <ClCompile Include="Numbers.cpp" />
     <ClCompile Include="QuadraticEquation.cpp" />
+    <ClCompile Include="Secant.cpp" />
+    <ClCompile Include="Sine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Addition.h" />
+    <ClInclude Include="Cosecant.h" />
     <ClInclude Include="Cotangent.h" />
     <ClInclude Include="Division.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="ImagineryNumbers.h" />
+    <ClInclude Include="Logarithmic.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Multiplication.h" />
     <ClInclude Include="NaturalLog.h" />
     <ClInclude Include="Numbers.h" />
     <ClInclude Include="QuadraticEquation.h" />
+    <ClInclude Include="Secant.h" />
+    <ClInclude Include="Sine.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Numbers.txt" />

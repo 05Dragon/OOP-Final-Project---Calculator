@@ -1,2 +1,2 @@
-quadratic
-2|24|3
+log
+2

@@ -3,9 +3,14 @@
 
 #include <iostream>
 #include "Menu.h"
+#include "Graph.h"
 using namespace std;
 
 int main()
 {
+	/*Graph graph;
+	double arra[4] = { 2.0, 3, -5, 5 };
+	double* array = arra;
+	graph.calc(array, 3);*/
 	Menu menu;
 }
