@@ -19,7 +19,7 @@ Numbers::Numbers()
 	myFileReader >> ope;
 
 	if (myFileReader) {
-		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0)
+		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0 || ope.compare("-") == 0)
 		{
 			while (!myFileReader.eof())
 			{
@@ -28,7 +28,7 @@ Numbers::Numbers()
 				size++;
 			}
 		}
-		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0)
+		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0 || ope.compare("tan") == 0 || ope.compare("cos") == 0)
 		{
 			string number = " ";
 			myFileReader >> number;
@@ -76,9 +76,21 @@ Numbers::Numbers()
 	else if (ope.compare("+") == 0) {
 		operation = '+';
 	}
+	else if (ope.compare("-") == 0)
+	{
+		operation = '-';
+	}
+	else if (ope.compare("tan") == 0)
+	{
+		operation = 9;
+	}
+	else if (ope.compare("cos") == 0)
+	{
+		operation = 8;
+	}
 
 	if (myFileReader) {
-		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0)
+		if (ope.compare("quadratic") == 0 || ope.compare("graph") == 0 || ope.compare("+") == 0 || ope.compare("*") == 0 || ope.compare("/") == 0 || ope.compare("-") == 0)
 		{
 			for (int i = 0; i < size; i++)
 			{
@@ -89,7 +101,7 @@ Numbers::Numbers()
 				array[i] = stod(number);
 			}
 		}
-		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0)
+		else if (ope.compare("ln") == 0 || ope.compare("cot") == 0 || ope.compare("csc") == 0 || ope.compare("sin") == 0 || ope.compare("log") == 0 || ope.compare("sec") == 0 || ope.compare("tan") == 0 || ope.compare("cos") == 0)
 		{
 			function = ope;
 			for (int i = 0; i < size; i++)

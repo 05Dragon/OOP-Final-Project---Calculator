@@ -4,12 +4,15 @@
 #include <iomanip>
 #include <fstream>
 #include "Addition.h"
+#include "Subtraction.h"
 #include "Division.h"
 #include "Multiplication.h"
 #include "Numbers.h"
 #include "NaturalLog.h"
 #include "Logarithmic.h"
 #include "Sine.h"
+#include "Cosine.h"
+#include "Tangent.h"
 #include "Cosecant.h"
 #include "Secant.h"
 #include "Cotangent.h"
@@ -23,11 +26,14 @@ Menu::Menu()
     std::cout << "Welcome to the supreme calculator" << endl;
     Numbers numbers;
     Addition addition;
+    Subtraction subtraction;
     Division division;
     Multiplication multiplication;
     Logarithmic log;
     NaturalLog ln;
     Sine sin;
+    Cosine cos;
+    Tangent tan;
     Cosecant csc;
     Secant sec;
     Cotangent cot;
@@ -37,7 +43,7 @@ Menu::Menu()
     int counter = 0;
     int size = 0;
 
-    if (numbers.getOpe() == '*' || (numbers.getOpe() == '/'))
+    if (numbers.getOpe() == ('*' || '/' || '+' || '-'))
     {
         std::cout << numbers.getArray()[0];
         for (int i = 1; i < numbers.getSize(); i++)
@@ -46,7 +52,7 @@ Menu::Menu()
         }
         std::cout << endl;
     }
-    else if (numbers.getOpe() == 6 || numbers.getOpe() == 12) {
+    else if (numbers.getOpe() == (5 || 6 || 7 || 8 || 9 || 10 || 11 || 12)) {
         string function = numbers.getFunction();
         std::cout << function << " " << numbers.getArray()[0];
         std::cout << endl;
@@ -57,7 +63,7 @@ Menu::Menu()
         addition.calc(numbers.getArray(), numbers.getSize());
         break;
     case '-':
-        std::cout << "Subtraction";
+        subtraction.calc(numbers.getArray(), numbers.getSize());
         break;
     case '*':
         multiplication.calc(numbers.getArray(), numbers.getSize());
@@ -74,11 +80,11 @@ Menu::Menu()
     case 7:
         sin.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 'cos':
-        std::cout << "Cos";
+    case 8:
+        cos.calc(numbers.getArray(), numbers.getSize());
         break;
-    case 'tan':
-        std::cout << "Tan";
+    case 9:
+        tan.calc(numbers.getArray(), numbers.getSize());
         break;
     case 10:
         csc.calc(numbers.getArray(), numbers.getSize());
