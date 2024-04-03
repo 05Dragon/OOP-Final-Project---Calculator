@@ -9,7 +9,11 @@ class Subtraction : public Numbers
 {
 public:
 	Subtraction();
-	void calc(double* myArray, int size);
+	void calc();
+
+	//Virtual function, that calculates the result needed for game1
+	virtual double calcGameSubtract(double*);
+
 	~Subtraction();
 };
 

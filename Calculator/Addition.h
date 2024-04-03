@@ -1,3 +1,4 @@
+//Define Header file and summon libraries
 #ifndef ADDITION_H
 #define ADDITION_H
 #include "Numbers.h"
@@ -5,11 +6,20 @@
 
 using namespace std;
 
+//Define Addition as child of Numbers
 class Addition : public Numbers
 {
+//Create public functions and variables
 public:
+	//Create default addition function
 	Addition();
-	void calc(double* myArray, int size);
+	//Create calc function for math operation
+	void calc();
+
+	//Virtual function, that calculates the result needed for game1
+	virtual double calcGamePlus(double*);
+
+	//Create destructor
 	~Addition();
 };
 

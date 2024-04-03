@@ -13,10 +13,11 @@ protected:
     int Size;
     char operation;
     string function;
+    string ope;
 
 public:
     Numbers();
-    virtual void calc(double* myArray, int size);
+    virtual void calc();
     int getSize() { return Size; }
     char getOpe() { return operation; }
     double* getArray() { return myArray; }

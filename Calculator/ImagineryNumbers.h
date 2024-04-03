@@ -6,7 +6,7 @@ class ImagineryNumbers: public Numbers
 {
 public:
 	ImagineryNumbers();
-	void calc(double* myArray, int size);
+	void calc();
 	~ImagineryNumbers();
 
 };

@@ -6,7 +6,7 @@ class QuadraticEquation: public Numbers
 {
 public:
 	QuadraticEquation();
-	void calc(double* myArray, int size);
+	void calc();
 	~QuadraticEquation();
 };
 

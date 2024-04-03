@@ -1,7 +1,9 @@
+//Define Graph Header file and import 
 #ifndef GRAPH_H
 #define GRAPH_H
 #include "Numbers.h"
 
+//
 class Graph: public Numbers
 {
 public:

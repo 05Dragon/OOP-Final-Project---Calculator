@@ -6,7 +6,7 @@ class Tangent : public Numbers
 {
 public:
 	Tangent();
-	void calc(double* myArray, int size);
+	void calc();
 	~Tangent();
 
 };

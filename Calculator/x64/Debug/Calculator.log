@@ -1,9 +1,2 @@
-﻿  Cosine.cpp
-  Menu.cpp
-C:\Users\shahr79\OneDrive - McMaster University\Winter 2024\1PR3\Final Project\OOP-Final-Project---Calculator\Calculator\Menu.cpp(46,48): warning C4805: '==': unsafe mix of type 'char' and type 'bool' in operation
-C:\Users\shahr79\OneDrive - McMaster University\Winter 2024\1PR3\Final Project\OOP-Final-Project---Calculator\Calculator\Menu.cpp(55,69): warning C4805: '==': unsafe mix of type 'char' and type 'bool' in operation
-  Numbers.cpp
-  Subtraction.cpp
-  Tangent.cpp
-  Generating Code...
+﻿  ImagineryNumbers.cpp
   Calculator.vcxproj -> C:\Users\shahr79\OneDrive - McMaster University\Winter 2024\1PR3\Final Project\OOP-Final-Project---Calculator\Calculator\x64\Debug\Calculator.exe

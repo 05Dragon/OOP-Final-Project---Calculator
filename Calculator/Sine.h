@@ -9,7 +9,7 @@ class Sine : public Numbers
 {
 public:
 	Sine();
-	void calc(double* myArray, int size);
+	void calc();
 	~Sine();
 };
 

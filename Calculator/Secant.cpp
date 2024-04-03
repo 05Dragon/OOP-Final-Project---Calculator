@@ -7,12 +7,12 @@ Secant::Secant()
 {
 }
 
-void Secant::calc(double* MyArray, int size)
+void Secant::calc()
 {
 	double secantresult = 0.0;
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < Size; i++)
 	{
-		secantresult = 1 / cos(MyArray[i]);
+		secantresult = 1 / cos(myArray[i]);
 		cout << secantresult;
 	}
 	if (secantresult == 0)

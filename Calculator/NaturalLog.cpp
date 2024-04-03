@@ -7,7 +7,7 @@ NaturalLog::NaturalLog()
 {
 }
 
-void NaturalLog::calc(double* myArray, int size)
+void NaturalLog::calc()
 {
 	double result = log(myArray[0]) / log(2.718281828);
 	cout << result;

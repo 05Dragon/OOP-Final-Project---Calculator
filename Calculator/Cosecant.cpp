@@ -1,19 +1,23 @@
+//Import Cosecant header file
 #include "Cosecant.h"
+//Summon libraries
 #include <cmath>
 #include <string>
 
+//Implement blank constructor
 Cosecant::Cosecant()
 {
 }
 
-void Cosecant::calc(double* MyArray, int size)
+//Implements calc function that will be used to perform cosecant operations
+void Cosecant::calc()
 {
 	double Cosecantresult = 0.0;
 	// set value to 0 as a base to hold the result of the cosecant calculation
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < Size; i++)
 	{
 
-		Cosecantresult = 1 / sin(MyArray[i]);
+		Cosecantresult = 1 / sin(myArray[i]);
 		// as cosecant is just sin^-1, this can just translate to 1 over sin
 		cout << Cosecantresult;
 		// prints out the result 

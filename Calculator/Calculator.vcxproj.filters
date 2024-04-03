@@ -69,6 +69,12 @@
     <ClCompile Include="Tangent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Game1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SecretNumberguess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Numbers.h">
@@ -120,6 +126,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Tangent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SecretNumberguess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

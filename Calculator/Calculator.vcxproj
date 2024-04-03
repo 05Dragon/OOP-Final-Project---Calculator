@@ -133,6 +133,7 @@
     <ClCompile Include="Cosine.cpp" />
     <ClCompile Include="Cotangent.cpp" />
     <ClCompile Include="Division.cpp" />
+    <ClCompile Include="Game1.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="ImagineryNumbers.cpp" />
     <ClCompile Include="Logarithmic.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="Numbers.cpp" />
     <ClCompile Include="QuadraticEquation.cpp" />
     <ClCompile Include="Secant.cpp" />
+    <ClCompile Include="SecretNumberguess.cpp" />
     <ClCompile Include="Sine.cpp" />
     <ClCompile Include="Subtraction.cpp" />
     <ClCompile Include="Tangent.cpp" />
@@ -152,6 +154,7 @@
     <ClInclude Include="Cosine.h" />
     <ClInclude Include="Cotangent.h" />
     <ClInclude Include="Division.h" />
+    <ClInclude Include="Game1.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="ImagineryNumbers.h" />
     <ClInclude Include="Logarithmic.h" />
@@ -161,6 +164,7 @@
     <ClInclude Include="Numbers.h" />
     <ClInclude Include="QuadraticEquation.h" />
     <ClInclude Include="Secant.h" />
+    <ClInclude Include="SecretNumberguess.h" />
     <ClInclude Include="Sine.h" />
     <ClInclude Include="Subtraction.h" />
     <ClInclude Include="Tangent.h" />

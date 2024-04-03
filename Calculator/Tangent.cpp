@@ -5,7 +5,7 @@ Tangent::Tangent()
 {
 }
 
-void Tangent::calc(double* myArray, int size)
+void Tangent::calc()
 {
 	double result = tan(myArray[0]);
 	cout << result;

@@ -1,10 +1,13 @@
+//Import Graph header file and summon libraries
 #include "Graph.h"
 #include <iostream>
 
+//Implement graph blank constuctor
 Graph::Graph()
 {
 }
 
+//Implement calc function to calculate and create graph
 void Graph::calc(double* myArray, int size) {
 
     double left_limit = myArray[0];
@@ -53,6 +56,7 @@ void Graph::calc(double* myArray, int size) {
     std::cout << "|\n";
 }
 
+//Implement graph deconstructor
 Graph::~Graph()
 {
 }

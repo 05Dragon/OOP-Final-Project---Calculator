@@ -1,3 +1,4 @@
+//Define Header file and summon libraries
 #ifndef COSECANT_H
 #define COSECANT_H
 #include "Numbers.h"
@@ -6,13 +7,16 @@
 #include <string>
 using namespace std;
 
+//Define Cosecant as a child of Numbers
 class Cosecant: public Numbers
 {
 
 public:
-
+	//Create default cosecant function
 	Cosecant();
-	void calc(double* MyArray, int size);
+	//Create calc function for math operations
+	void calc();
+	//Create destuctor
 	~Cosecant();
 };
 

@@ -3,14 +3,15 @@
 #include <cmath>
 #include <iostream>
 #include <string>
+#include "Numbers.h"
 
 using namespace std;
 
-class Secant
+class Secant : public Numbers
 {
 public:
 	Secant();
-	virtual void calc(double* MyArray, int size);
+	void calc();
 	~Secant();
 
 };

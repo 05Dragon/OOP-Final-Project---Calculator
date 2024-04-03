@@ -1,3 +1,4 @@
+//Summon Header files and libraries
 #include "Menu.h"
 #include <iostream>
 #include <string>
@@ -19,10 +20,13 @@
 #include "QuadraticEquation.h"
 #include "Graph.h"
 #include "ImagineryNumbers.h"
+#include "Game1.h"
+#include "SecretNumberguess.h"
 using namespace std;
 
 Menu::Menu()
 {
+    //Display all options and call appropriate functions
     std::cout << "Welcome to the supreme calculator" << endl;
     Numbers numbers;
     Addition addition;
@@ -40,10 +44,12 @@ Menu::Menu()
     QuadraticEquation quadratic;
     Graph graph;
     ImagineryNumbers imagineryNumbers;
+    game1 game1;
+    SecretNumberguess game2;
     int counter = 0;
     int size = 0;
 
-    if (numbers.getOpe() == ('*' || '/' || '+' || '-'))
+    if (numbers.getOpe() == '*' || numbers.getOpe() == '/' || numbers.getOpe() == '+' || numbers.getOpe() == '-')
     {
         std::cout << numbers.getArray()[0];
         for (int i = 1; i < numbers.getSize(); i++)
@@ -52,7 +58,7 @@ Menu::Menu()
         }
         std::cout << endl;
     }
-    else if (numbers.getOpe() == (5 || 6 || 7 || 8 || 9 || 10 || 11 || 12)) {
+    else if (numbers.getOpe() == 5 || numbers.getOpe() == 6 || numbers.getOpe() == 7 || numbers.getOpe() == 8 || numbers.getOpe() == 9 || numbers.getOpe() == 10 || numbers.getOpe() == 11 || numbers.getOpe() == 12) {
         string function = numbers.getFunction();
         std::cout << function << " " << numbers.getArray()[0];
         std::cout << endl;
@@ -60,64 +66,54 @@ Menu::Menu()
     
     switch (numbers.getOpe()) {
     case '+':
-        addition.calc(numbers.getArray(), numbers.getSize());
+        addition.calc();
         break;
     case '-':
-        subtraction.calc(numbers.getArray(), numbers.getSize());
+        subtraction.calc();
         break;
     case '*':
-        multiplication.calc(numbers.getArray(), numbers.getSize());
+        multiplication.calc();
         break;
     case '/':
-        division.calc(numbers.getArray(), numbers.getSize());
+        division.calc();
         break;
     case 5:
-        log.calc(numbers.getArray(), numbers.getSize());
+        log.calc();
         break;
     case 6:
-        ln.calc(numbers.getArray(), numbers.getSize());
+        ln.calc();
         break;
     case 7:
-        sin.calc(numbers.getArray(), numbers.getSize());
+        sin.calc();
         break;
     case 8:
-        cos.calc(numbers.getArray(), numbers.getSize());
+        cos.calc();
         break;
     case 9:
-        tan.calc(numbers.getArray(), numbers.getSize());
+        tan.calc();
         break;
     case 10:
-        csc.calc(numbers.getArray(), numbers.getSize());
+        csc.calc();
         break;
     case 11:
-        sec.calc(numbers.getArray(), numbers.getSize());
+        sec.calc();
         break;
     case 12:
-        cot.calc(numbers.getArray(), numbers.getSize());
+        cot.calc();
         break;
     case 13:
-        quadratic.calc(numbers.getArray(), numbers.getSize());
+        quadratic.calc();
         break;
-    case 14:
-        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
-    case 15:
-        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
-    case 16:
-        imagineryNumbers.calc(numbers.getArray(), numbers.getSize());
-    case 'G1':
-        std::cout << "Tomas' game";
-        break;
-    case 'G2':
-        std::cout << "Game 2";
-        break;
-    case 'G3':
-        std::cout << "Game 3";
-        break;
-    case 'G4':
-        std::cout << "Game 4";
+    case 17:
+        game1.start();
         break;
     case 18:
-        graph.calc(numbers.getArray(), numbers.getSize());
+        game2.guessgame();
+        break;
+    case 19:
+        imagineryNumbers.calc();
+    case 20:
+        //graph.calc();
         break;
     default:
         std::cout << "Please try again";
@@ -126,7 +122,7 @@ Menu::Menu()
 
     std::cout << endl;
 }
-
+//Implement destructor
 Menu::~Menu()
 {
 }
