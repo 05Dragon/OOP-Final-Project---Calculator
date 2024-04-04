@@ -134,7 +134,6 @@
     <ClCompile Include="Cotangent.cpp" />
     <ClCompile Include="Division.cpp" />
     <ClCompile Include="Game1.cpp" />
-    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="ImagineryNumbers.cpp" />
     <ClCompile Include="Logarithmic.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -155,7 +154,6 @@
     <ClInclude Include="Cotangent.h" />
     <ClInclude Include="Division.h" />
     <ClInclude Include="Game1.h" />
-    <ClInclude Include="Graph.h" />
     <ClInclude Include="ImagineryNumbers.h" />
     <ClInclude Include="Logarithmic.h" />
     <ClInclude Include="Menu.h" />

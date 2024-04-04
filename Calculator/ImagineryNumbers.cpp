@@ -1,10 +1,12 @@
+//Import ImagineryNumbers header file
 #include "ImagineryNumbers.h"
 
-const double e = 2.71828;
+//Implements default imaginery constructor
 ImagineryNumbers::ImagineryNumbers()
 {
 }
 
+//Implements calc function that will be used to perform imaginery numbers operations
 void ImagineryNumbers::calc()
 {
 	if (function.compare("rectangular->polar") == 0)
@@ -31,8 +33,20 @@ void ImagineryNumbers::calc()
 		double y = myArray[0] * sin(myArray[1]);
 		cout << x << " + " << y << "i" << endl;
 	}
+	else if (function.compare("exponential->polar") == 0)
+	{
+		double z = myArray[0];
+		double angle = myArray[1];
+		cout << z << " " << angle;
+	}
+	else if (function.compare("exponential->rectangular") == 0)
+	{
+		double x = myArray[0] * cos(myArray[1]);
+		double y = myArray[0] * sin(myArray[1]);
+		cout << x << " + " << y << "i" << endl;
+	}
 }
-
+//Implement destructor
 ImagineryNumbers::~ImagineryNumbers()
 {
 }

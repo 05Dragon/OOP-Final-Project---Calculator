@@ -11,6 +11,7 @@ class SecretNumberguess
 {
 
 public:
+	//Create default SecretNumberGuess function
 	SecretNumberguess();
 	virtual void guessgame();
 	~SecretNumberguess();

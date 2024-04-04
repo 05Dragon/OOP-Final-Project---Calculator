@@ -1,20 +1,27 @@
+//Import Secant header file and summon libraries
 #include "Secant.h"
 #include <cmath>
 #include <string>
 #include <iostream>
 
+//Implement default constructor
 Secant::Secant()
 {
 }
 
+//Implement calc function to perform secant calculations
 void Secant::calc()
 {
+	//Initalize variable
 	double secantresult = 0.0;
+	//for loop to iterate through number array
 	for (int i = 0; i < Size; i++)
 	{
+		//set inital value of secantresult
 		secantresult = 1 / cos(myArray[i]);
 		cout << secantresult;
 	}
+	//if statement to handle error condition
 	if (secantresult == 0)
 	{
 		cout << "math ERROR" << endl;
@@ -26,7 +33,7 @@ void Secant::calc()
 		// error will also when number inputted 
 	}
 }
-
+//Implement destructor
 Secant::~Secant()
 {
 

@@ -18,7 +18,6 @@
 #include "Secant.h"
 #include "Cotangent.h"
 #include "QuadraticEquation.h"
-#include "Graph.h"
 #include "ImagineryNumbers.h"
 #include "Game1.h"
 #include "SecretNumberguess.h"
@@ -26,7 +25,7 @@ using namespace std;
 
 Menu::Menu()
 {
-    //Display all options and call appropriate functions
+    //Call appropriate functions
     std::cout << "Welcome to the supreme calculator" << endl;
     Numbers numbers;
     Addition addition;
@@ -42,7 +41,6 @@ Menu::Menu()
     Secant sec;
     Cotangent cot;
     QuadraticEquation quadratic;
-    Graph graph;
     ImagineryNumbers imagineryNumbers;
     game1 game1;
     SecretNumberguess game2;
@@ -62,6 +60,11 @@ Menu::Menu()
         string function = numbers.getFunction();
         std::cout << function << " " << numbers.getArray()[0];
         std::cout << endl;
+    }
+    else if (numbers.getOpe() == 13) {
+        std::cout << "a = " << numbers.getArray()[0] << endl;
+        std::cout << "b = " << numbers.getArray()[1] << endl;
+        std::cout << "c = " << numbers.getArray()[2] << endl;
     }
     
     switch (numbers.getOpe()) {
@@ -112,11 +115,14 @@ Menu::Menu()
         break;
     case 19:
         imagineryNumbers.calc();
-    case 20:
-        //graph.calc();
         break;
     default:
+        if (numbers.getOpe() == 100)
+        {
+            std::cout << "Incorrect number of digits entered" << endl;
+        }
         std::cout << "Please try again";
+
         break;
     }
 

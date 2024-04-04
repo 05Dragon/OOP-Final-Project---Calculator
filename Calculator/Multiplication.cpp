@@ -42,7 +42,7 @@ double Multiplication::calcGameMultiply(double* myArray)
 	writer.close();
 	return 1;
 }
-
+//Implement destructor
 Multiplication::~Multiplication()
 {
 

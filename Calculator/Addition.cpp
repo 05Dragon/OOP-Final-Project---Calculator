@@ -2,7 +2,7 @@
 #include "Addition.h"
 #include <fstream>
 
-//Implements blank addition constructor
+//Implements default addition constructor
 Addition::Addition()
 {
 }

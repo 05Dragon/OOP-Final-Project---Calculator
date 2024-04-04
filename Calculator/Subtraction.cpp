@@ -7,14 +7,18 @@ Subtraction::Subtraction()
 {
 }
 
-
+//Implement calc function to perform subtraction calculations
 void Subtraction::calc()
 {
+	//Set segment 1 of array equal to product
 	double product = myArray[0];
+	//for loop to iterate through number array
 	for (int i = 1; i < Size; i++)
 	{
+		//perform multiplication operation on segment
 		product -= myArray[i];
 	}
+	//Display final calcuated value
 	cout << product;
 }
 
@@ -34,7 +38,7 @@ double Subtraction::calcGameSubtract(double* myArray)
 	return 1;
 }
 
-
+//Implement destructor
 Subtraction::~Subtraction()
 {
 
